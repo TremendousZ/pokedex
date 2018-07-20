@@ -3,7 +3,7 @@ $(document).ready(startUp);
 
 
 function startUp() {
-    $('.enter').on('click' , getPokemonDummyData);
+    $('.enter').on('click' , getPokemonDummyData( pokeDummyData ));
     // $(".keyPad").on('click', ".keypad > button", enterNumber);
     
 }
@@ -22,22 +22,36 @@ function startUp() {
 // }
 
 
-
-
-
-function loadPokemonData( response ) {
-   //need picture, number, name, height, weight, ability, type,  
+function getPokemonDummyData( response ) {
     var nameOfPokemon = response.name;
     $("#pokemonName").text(nameOfPokemon);
     var pokemonWeight = response.weight;
-    $('#weight').text(pokemonWeight);
+    $('#weight').text(` Weight: ${pokemonWeight}`);
     var pokemonImage = response.sprites.front_default; 
-    $('#pokemonImage').src(pokemonImage);
+    $('#pokemonImage').attr("src", pokemonImage);
     var pokemonHeight = response.height;
-    $('#height').text(pokemonHeight);
+    $('#height').text(`Height: ${pokemonHeight}`);
     var pokeNumber = response.id;
-    $('#pokeNumber').text(pokeNumber);
+    $('#pokeNumber').text(pokeNumber);  
+    var pokeType = response.types[0].type.name;
+    $('#type').text( `Type: ${pokeType}`); 
+
 }
+
+
+// function loadPokemonData( response ) {
+//    //need picture, number, name, height, weight, ability, type,  
+//     var nameOfPokemon = response.name;
+//     $("#pokemonName").text(nameOfPokemon);
+//     var pokemonWeight = response.weight;
+//     $('#weight').text(pokemonWeight);
+//     var pokemonImage = response.sprites.front_default; 
+//     $('#pokemonImage').src(pokemonImage);
+//     var pokemonHeight = response.height;
+//     $('#height').text(pokemonHeight);
+//     var pokeNumber = response.id;
+//     $('#pokeNumber').text(pokeNumber);
+// }
 
 // http://pokeapi.co/api/v2/pokemon/ <------number
 

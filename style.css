@@ -99,7 +99,16 @@ body{
     width:75%;
     height: 90%;
     border: 1px black solid;
+    list-style: none;
+    position: relative;
     
+}   
+#pokeNumber{
+    font-size:150%;
+}
+
+#pokemonName {
+    text-transform: uppercase
 }
 
 .description{
