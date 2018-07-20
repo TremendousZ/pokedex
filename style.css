@@ -1,0 +1,130 @@
+
+body{ 
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.leftSidePokedexLayout {
+    width: 30%;
+    height: 80%;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    border: 3px black solid;
+}
+
+.topLights {
+    border: 1px black solid;
+    height:17%;
+    width: 100%;
+
+}
+
+.bulb {
+    display:inline-block;
+    border: 1px solid black;
+    height: 80%;
+    background-color: blue;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.battery {
+    display: inline-block;
+    width: 8%;
+    height: 25%;
+    border: 1px solid black;
+    vertical-align: top;
+    border-radius: 50%;
+}
+.redBatteryLight{
+    background-color: brown;
+}
+
+.yellowBatteryLight{
+    background-color: yellow;
+}
+
+.greenBatteryLight{
+    background-color: green;
+}
+
+.displayScreenBorder {
+    width: 70%;
+    height: 50%;
+    border: 1px black solid;
+    position: relative;
+    top: 28%;
+    left: 50%;
+    transform: translate( -50%,-50%)
+
+}
+
+.screen{
+    width: 95%;
+    height: 95%;
+    border: 1px solid black;
+    position: relative;
+    top:2.5%;
+    left: 2.5%;
+
+}
+
+#pokemonImage{
+    display:inline-block;
+    height:50%;
+    width: 50%;
+    border: 1 px solid aliceblue;
+
+}
+
+.numberDisplay{
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    height: 50%;
+    border: 1px solid blue;
+}
+
+.stats{
+    width:75%;
+    height: 90%;
+    border: 1px black solid;
+    
+}
+
+.description{
+    width: 100%;
+    height:49%;
+    border: 1px solid blue;
+
+}
+
+.buttonArea {
+    height: 30%;
+    width: 100%;
+    border: 2px solid yellow;
+    position: relative;
+    top:2.5%;
+}
+
+.powerButton {
+    height: 30%;
+    width: 15%;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    background-color: darkgrey;
+}
+
+.selectButton {
+    position: relative;
+    width: 20%;
+    height: 5%;
+    vertical-align: top;
+}

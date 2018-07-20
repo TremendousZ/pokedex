@@ -6,26 +6,44 @@
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>    
 <script src = main.js></script>
+<link rel="stylesheet" type = "text/css" href="style.css">
 <title>Pokedex v1.0</title> 
 
 </head>
 <body>
-    <div class = "containter">     
+    <div class = "container">     
         <div class = "leftSidePokedexLayout">
             <div class = "topLights">
-                <div class = "largeBlueLight"></div>
-                <div class = "redLight"></div>
-                <div class = "yellowLight"></div>
-                <div class ="greenLight"></div>
+                <div class = "bulb"></div>
+                <div class = "redBatteryLight battery"></div>
+                <div class = "yellowBatteryLight battery"></div>
+                <div class ="greenBatteryLight battery"></div>
             </div>
-            <div class ="mainDisplayArea">
-                <div class = "screenBoarder"></div>
-                <div class = "screen"></div>
+            <div class ="displayScreenBorder">
+                <div class = "screen">
+                    <img id="pokemonImage">
+                    <div class = "numberDisplay">
+                            <ul class= "stats">
+                                <li id="pokeNumber"></li>
+                                    <li id = "type"></li>
+                                    <li id ="height"></li>
+                                    <li id ="weight"></li>
+                                    <li id="ability"></li>
+                                    
+                                </ul>
+                    </div>
+                   <div class = "description">
+                        <div id = "pokemonName"></div>
+                        <div id = "pokemonType"></div>
+                        <div id = "decription"></div>
+                   </div>
+                    
+                </div>
             </div>
             <div class = "buttonArea">
-                <button class = "bluebutton" type = "button"></button>
-                <button class = "greenSelectButton" type = "button"></button>
-                <button class = "orangeSelectButton" type = "button"></button>
+                <button class = "powerButton" type = "button"></button>
+                <button class = "greenSelectButton selectButton" type = "button"></button>
+                <button class = "orangeSelectButton selectButton" type = "button"></button>
                 <div class = "directionalPad">
                     <button class = "upDirection" type = "button"> up </button>
                     <button class = "leftDirection" type = "button">left</button>
@@ -38,7 +56,7 @@
 
         <div class = "rightSidePokedexLayout">
             <div class = "infoDisplayArea"></div>
-            <div class = "infoButtons">
+            <div class = "numberButtons">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -51,7 +69,19 @@
                 <div></div>
             </div>
             <div class = "bottomButtonLayout">
+                <div class = "minusButton">
+
+                </div>
+                <div class = "plusButton">
+
+                </div>
                 
+            </div>
+            <div class = "lastRowOfButtons">
+                <div class = "clear">
+
+                </div>
+                <div class = "enterButton"></div>
             </div>
         </div>
 
