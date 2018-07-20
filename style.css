@@ -62,7 +62,8 @@ body{
     position: relative;
     top: 28%;
     left: 50%;
-    transform: translate( -50%,-50%)
+    transform: translate( -50%,-50%);
+    background-color: brown;
 
 }
 
@@ -73,7 +74,7 @@ body{
     position: relative;
     top:2.5%;
     left: 2.5%;
-
+    background-color: lightgray;
 }
 
 #pokemonImage{
@@ -122,9 +123,52 @@ body{
     background-color: darkgrey;
 }
 
-.selectButton {
+.styleButton {
     position: relative;
-    width: 20%;
+    width: 30%;
     height: 5%;
     vertical-align: top;
+}
+
+.selectButton {
+    position: relative;
+    width: 35%;
+    height:30%;
+    border: 1px solid green;
+    display: inline-block;
+    left: 24%;
+
+}
+.directionalPad {
+    width: 30%;
+    height:40%;
+    border: 1px purple solid;
+    float: right;
+}
+
+.upDirection {
+    display: block;
+    width: 47%;
+    position: relative;
+    left:50%;
+    transform:translate(-50%);
+}
+
+.leftDirection {
+    display:inline-block;
+    width: 47%;
+
+}
+.rightDirection{
+    display:inline-block;
+    width:47%;
+
+}
+
+.downDirection {
+    display: block;
+    width: 47%;
+    position: relative;
+    left:50%;
+    transform:translate(-50%);
 }
