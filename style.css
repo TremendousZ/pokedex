@@ -10,7 +10,9 @@ body{
 
 }
 
+
 .leftSidePokedexLayout {
+    vertical-align: top;
     width: 30%;
     height: 80%;
     background-color: red;
@@ -80,7 +82,7 @@ body{
 #pokemonImage{
     display:inline-block;
     height:50%;
-    width: 50%;
+    width: 49%;
     border: 1 px solid aliceblue;
 
 }
@@ -137,7 +139,14 @@ body{
     border: 1px solid green;
     display: inline-block;
     left: 24%;
+    background-color: lightgreen;
+}
+.redSelectButton{
+    background-color: red;
 
+}
+.greenSelectButton{
+    background-color: darkgreen;
 }
 .directionalPad {
     width: 30%;
@@ -157,12 +166,10 @@ body{
 .leftDirection {
     display:inline-block;
     width: 47%;
-
 }
 .rightDirection{
     display:inline-block;
     width:47%;
-
 }
 
 .downDirection {
@@ -171,4 +178,85 @@ body{
     position: relative;
     left:50%;
     transform:translate(-50%);
+}
+
+.rightSidePokedexLayout {
+    width: 30%;
+    height: 80%;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    border: 3px black solid;
+}
+
+.numberSearchBar{
+    width: 80%; 
+    height: 20%;
+    border: 2px solid yellow;
+    position: relative;
+    top: 25%;
+    left:10%;
+    background-color: lightgray;
+
+}
+
+.keyPad {
+    width: 80%;
+    height: 18%;
+    background-color: aquamarine;
+    position: relative;
+    top:28%;
+    left:10%;
+    font-size: 0;
+}
+
+.keyPad > button{
+    width: 19%;
+    height:50%;
+    background-color: royalblue;
+    margin: 0 .5%;
+}
+
+.bottomButtonLayout {
+    height: 15%;
+    width: 50%;
+    border: 2px solid greenyellow;
+    left:10%;
+    position: absolute;
+    bottom: 15%;
+    font-size: 0;
+}
+.minusButton {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    position: relative;
+    top: 25%;
+}
+.plusButton{
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
+    position: relative;
+    top: 25%;
+}
+
+.lastRowOfButtons {
+    height: 7.5%;
+    width: 80%;
+    border: 2px solid purple;
+    left:10%;
+    position: absolute;
+    bottom: 3%;
+    font-size: 0;
+}
+.clear{
+    width:50%;
+    background-color: darkolivegreen;
+}
+.enter{
+    width:50%;
+    background-color: darkolivegreen;
 }
