@@ -28,15 +28,23 @@ function getPokemonDummyData( response ) {
     var nameOfPokemon = response.name;
     $("#pokemonName").text(nameOfPokemon);
     var pokemonWeight = response.weight;
-    $('#weight').text(` Weight: ${pokemonWeight}`);
+    $('#weight').text(` WEIGHT: ${pokemonWeight} kg`);
     var pokemonImage = response.sprites.front_default; 
     $('#pokemonImage').attr("src", pokemonImage);
     var pokemonHeight = response.height;
-    $('#height').text(`Height: ${pokemonHeight}`);
+    $('#height').text(`HEIGHT: ${pokemonHeight} m`);
     var pokeNumber = response.id;
-    $('#pokeNumber').text(pokeNumber);  
+    if(pokeNumber < 10) {
+        $('#pokeNumber').text(`#00${pokeNumber}`);  
+    } else if (pokeNumber < 100) {
+        $('#pokeNumber').text(`#0${pokeNumber}`); 
+    } else {
+        $('#pokeNumber').text(`#${pokeNumber}`);  
+    }
     var pokeType = response.types[0].type.name;
-    $('#type').text( `Type: ${pokeType}`); 
+    $('#type').text( `TYPE: ${pokeType}`); 
+    var pokeAbility = response.abilities[1].ability.name;
+    $("#ability").text(`ABILITY: ${pokeAbility}`);
 
 }
 
@@ -77,7 +85,7 @@ function pokeNumberSearchDisplay( number ){
 }
 
 function submitPokeNumber(  ) {
-    getPokemon( pokeNumber );
-    // getPokemonDummyData( pokeDummyData )
+    // getPokemon( pokeNumber );
+    getPokemonDummyData( pokeDummyData )
 
 }

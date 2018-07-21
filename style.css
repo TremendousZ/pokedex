@@ -70,6 +70,7 @@ body{
 }
 
 .screen{
+    font-size: 0;
     width: 95%;
     height: 95%;
     border: 1px solid black;
@@ -94,20 +95,30 @@ body{
     height: 50%;
     border: 1px solid blue;
 }
-
+#pokeNumber{
+    width: 100%;
+    height:20%;
+}
 .stats{
-    width:75%;
-    height: 90%;
-    border: 1px black solid;
+    width:100%;
+    height: 70%;
     list-style: none;
     position: relative;
+    font-size: 1.5vmin;
+    padding:0;
+    background: linear-gradient(white, grey);
+    border-radius: 5%;
     
 }   
+
+.stats > li {
+    margin: 10% 2%
+}
 #pokeNumber{
     font-size:150%;
 }
 
-#pokemonName {
+#pokemonName, #ability, #type {
     text-transform: uppercase
 }
 
@@ -117,6 +128,7 @@ body{
     border: 1px solid blue;
 
 }
+
 
 .buttonArea {
     height: 30%;
@@ -145,10 +157,9 @@ body{
     position: relative;
     width: 35%;
     height:30%;
-    border: 1px solid green;
     display: inline-block;
     left: 24%;
-    background-color: lightgreen;
+    background: linear-gradient(lightgreen,green)
 }
 .redSelectButton{
     background-color: red;
@@ -162,11 +173,18 @@ body{
     height:40%;
     border: 1px purple solid;
     float: right;
+    font-size: 0;
+
+}
+.directionButton{
+    background-color: darkslategray;
+    font-size: 1rem;
+    color: white;
 }
 
 .upDirection {
     display: block;
-    width: 47%;
+    width: 38%;
     position: relative;
     left:50%;
     transform:translate(-50%);
@@ -174,16 +192,18 @@ body{
 
 .leftDirection {
     display:inline-block;
-    width: 47%;
+    width: 50%;
+    height: 36%;
 }
 .rightDirection{
     display:inline-block;
-    width:47%;
+    width:50%;
+    height: 36%;
 }
 
 .downDirection {
     display: block;
-    width: 47%;
+    width: 38%;
     position: relative;
     left:50%;
     transform:translate(-50%);
