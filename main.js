@@ -95,7 +95,7 @@ function pokeNumberSearchDisplay( number ){
 }
 
 function submitPokeNumber(  ) {
-    getPokemon( pokeNumber );
-    // getPokemonDummyData( pokeDummyData )
+    // getPokemon( pokeNumber );
+    getPokemonDummyData( pokeDummyData );
 
 }
