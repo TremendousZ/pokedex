@@ -200,12 +200,14 @@ body{
 
 .numberSearchBar{
     width: 80%; 
-    height: 20%;
-    border: 2px solid yellow;
+    height: 10%;
+    border: 8px solid darkslategray;
     position: relative;
     top: 25%;
     left:10%;
     background-color: lightgray;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 175%;
 
 }
 
@@ -223,7 +225,10 @@ body{
     width: 19%;
     height:50%;
     background-color: royalblue;
+    border-radius: 15%;
     margin: 0 .5%;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
 }
 
 .bottomButtonLayout {
@@ -238,18 +243,16 @@ body{
 .minusButton {
     display: inline-block;
     width: 50%;
-    height: 50%;
+    height: 100%;
     border: 1px solid black;
-    position: relative;
-    top: 25%;
+    font-size:4vmin;
 }
 .plusButton{
     display: inline-block;
     width: 50%;
-    height: 50%;
+    height: 100%;
     border: 1px solid black;
-    position: relative;
-    top: 25%;
+    font-size:4vmin;
 }
 
 .lastRowOfButtons {
@@ -263,9 +266,15 @@ body{
 }
 .clear{
     width:50%;
+    height:100%;
     background-color: darkolivegreen;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
 }
 .enter{
+    height:100%;
     width:50%;
     background-color: darkolivegreen;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
 }
