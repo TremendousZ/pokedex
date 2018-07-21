@@ -12,12 +12,13 @@ var pokemonSearchIndex = [];
 
 function getPokemon( number ){
     console.log("AJAX initiated");
-    debugger;
+
     var ajaxCall = {
-        dataType: "jsonp",
-        url: `http://pokeapi.co/api/v2/pokemon/${pokeNumber}`,
-        method: 'get',
-        success: loadPokemonData
+        dataType: "json",
+        url: `https://pokeapi.co/api/v2/pokemon/${number}`,
+        // method: 'get',
+        success: loadPokemonData,
+        // error: console.log
 
     }
     $.ajax(ajaxCall);
@@ -50,17 +51,26 @@ function getPokemonDummyData( response ) {
 
 
 function loadPokemonData( response ) {
-   //need picture, number, name, height, weight, ability, type,  
     var nameOfPokemon = response.name;
     $("#pokemonName").text(nameOfPokemon);
     var pokemonWeight = response.weight;
-    $('#weight').text(pokemonWeight);
+    $('#weight').text(` WEIGHT: ${pokemonWeight} kg`);
     var pokemonImage = response.sprites.front_default; 
-    $('#pokemonImage').src(pokemonImage);
+    $('#pokemonImage').attr("src", pokemonImage);
     var pokemonHeight = response.height;
-    $('#height').text(pokemonHeight);
+    $('#height').text(`HEIGHT: ${pokemonHeight} m`);
     var pokeNumber = response.id;
-    $('#pokeNumber').text(pokeNumber);
+    if(pokeNumber < 10) {
+        $('#pokeNumber').text(`#00${pokeNumber}`);  
+    } else if (pokeNumber < 100) {
+        $('#pokeNumber').text(`#0${pokeNumber}`); 
+    } else {
+        $('#pokeNumber').text(`#${pokeNumber}`);  
+    }
+    var pokeType = response.types[0].type.name;
+    $('#type').text( `TYPE: ${pokeType}`); 
+    var pokeAbility = response.abilities[1].ability.name;
+    $("#ability").text(`ABILITY: ${pokeAbility}`);
 }
 
 // http://pokeapi.co/api/v2/pokemon/ <------number
@@ -85,7 +95,7 @@ function pokeNumberSearchDisplay( number ){
 }
 
 function submitPokeNumber(  ) {
-    // getPokemon( pokeNumber );
-    getPokemonDummyData( pokeDummyData )
+    getPokemon( pokeNumber );
+    // getPokemonDummyData( pokeDummyData )
 
 }
