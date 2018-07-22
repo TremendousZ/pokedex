@@ -1,0 +1,303 @@
+
+body{ 
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.leftSidePokedexLayout {
+    vertical-align: top;
+    width: 30%;
+    height: 80%;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    border: 3px black solid;
+}
+
+.topLights {
+    border: 1px black solid;
+    height:17%;
+    width: 100%;
+
+}
+
+.bulb {
+    display:inline-block;
+    border: 1px solid black;
+    height: 80%;
+    background-color: blue;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.battery {
+    display: inline-block;
+    width: 8%;
+    height: 25%;
+    border: 1px solid black;
+    vertical-align: top;
+    border-radius: 50%;
+}
+.redBatteryLight{
+    background-color: brown;
+}
+
+.yellowBatteryLight{
+    background-color: yellow;
+}
+
+.greenBatteryLight{
+    background-color: green;
+}
+
+.displayScreenBorder {
+    width: 70%;
+    height: 50%;
+    border: 1px black solid;
+    position: relative;
+    top: 28%;
+    left: 50%;
+    transform: translate( -50%,-50%);
+    background-color: brown;
+
+}
+
+.screen{
+    font-size: 0;
+    width: 95%;
+    height: 95%;
+    border: 1px solid black;
+    position: relative;
+    top:2.5%;
+    left: 2.5%;
+    background-color: lightgray;
+}
+
+#pokemonImage{
+    display:inline-block;
+    height:50%;
+    width: 49%;
+    border: 1 px solid aliceblue;
+
+}
+
+.numberDisplay{
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    height: 50%;
+    border: 1px solid blue;
+}
+#pokeNumber{
+    display: inline-block;
+    width: 100%;
+    height:30%;
+    font-size: 3vmin;
+    border: 3px pink dotted;
+    text-align: center;
+}
+.stats{
+    width:100%;
+    margin: 0;
+    height: 70%;
+    list-style: none;
+    position: relative;
+    font-size: 1vmin;
+    padding:0;
+    background: linear-gradient(white, grey);
+    border-radius: 5%;
+    
+}   
+
+.stats > li {
+
+}
+
+
+#pokemonName, #ability, #type {
+    text-transform: uppercase
+}
+
+.description{
+    width: 100%;
+    height:49%;
+    border: 1px solid blue;
+
+}
+
+
+.buttonArea {
+    height: 30%;
+    width: 100%;
+    border: 2px solid yellow;
+    position: relative;
+    top:2.5%;
+}
+
+.powerButton {
+    height: 30%;
+    width: 15%;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    background-color: darkgrey;
+}
+
+.styleButton {
+    position: relative;
+    width: 30%;
+    height: 5%;
+    vertical-align: top;
+}
+
+.selectButton {
+    position: relative;
+    width: 35%;
+    height:30%;
+    display: inline-block;
+    left: 24%;
+    background: linear-gradient(lightgreen,green)
+}
+.redSelectButton{
+    background-color: red;
+
+}
+.greenSelectButton{
+    background-color: darkgreen;
+}
+.directionalPad {
+    width: 30%;
+    height:40%;
+    border: 1px purple solid;
+    float: right;
+    font-size: 0;
+
+}
+.directionButton{
+    background-color: darkslategray;
+    font-size: 1rem;
+    color: white;
+}
+
+.upDirection {
+    display: block;
+    width: 38%;
+    position: relative;
+    left:50%;
+    transform:translate(-50%);
+}
+
+.leftDirection {
+    display:inline-block;
+    width: 50%;
+    height: 36%;
+}
+.rightDirection{
+    display:inline-block;
+    width:50%;
+    height: 36%;
+}
+
+.downDirection {
+    display: block;
+    width: 38%;
+    position: relative;
+    left:50%;
+    transform:translate(-50%);
+}
+
+.rightSidePokedexLayout {
+    width: 30%;
+    height: 80%;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    border: 3px black solid;
+}
+
+.numberSearchBar{
+    width: 80%; 
+    height: 10%;
+    border: 8px solid darkslategray;
+    position: relative;
+    top: 25%;
+    left:10%;
+    background-color: lightgray;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 175%;
+
+}
+
+.keyPad {
+    width: 80%;
+    height: 18%;
+    background-color: aquamarine;
+    position: relative;
+    top:28%;
+    left:10%;
+    font-size: 0;
+}
+
+.keyPad > button{
+    width: 19%;
+    height:50%;
+    background-color: royalblue;
+    border-radius: 15%;
+    margin: 0 .5%;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
+}
+
+.bottomButtonLayout {
+    height: 15%;
+    width: 50%;
+    border: 2px solid greenyellow;
+    left:10%;
+    position: absolute;
+    bottom: 15%;
+    font-size: 0;
+}
+.minusButton {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    font-size:4vmin;
+}
+.plusButton{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    font-size:4vmin;
+}
+
+.lastRowOfButtons {
+    height: 7.5%;
+    width: 80%;
+    border: 2px solid purple;
+    left:10%;
+    position: absolute;
+    bottom: 3%;
+    font-size: 0;
+}
+.clear{
+    width:50%;
+    height:100%;
+    background-color: darkolivegreen;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
+}
+.enter{
+    height:100%;
+    width:50%;
+    background-color: darkolivegreen;
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1rem;
+}

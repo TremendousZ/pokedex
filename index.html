@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>    
+<script src = main.js></script>
+<script src = pokedata.js></script>
+<link rel="stylesheet" type = "text/css" href="style.css">
+<title>Pokedex v1.0</title> 
+
+</head>
+<body>
+    <div class = "container">     
+        <div class = "leftSidePokedexLayout">
+            <div class = "topLights">
+                <div class = "bulb"></div>
+                <div class = "redBatteryLight battery"></div>
+                <div class = "yellowBatteryLight battery"></div>
+                <div class ="greenBatteryLight battery"></div>
+            </div>
+            <div class ="displayScreenBorder">
+                <div class = "screen">
+                    <img id="pokemonImage">
+                    <div class = "numberDisplay">
+                        <div id="pokeNumber"></div>
+                            <ul class= "stats">
+                                <!-- <li id="pokeNumber"></li> -->
+                                    <li id = "type"></li>
+                                    <li id ="height"></li>
+                                    <li id ="weight"></li>
+                                    <li id="ability"></li>
+                                    
+                                </ul>
+                    </div>
+                   <div class = "description">
+                        <div id = "pokemonName"></div>
+                        <div id = "pokemonType"></div>
+                        <div id = "decription"></div>
+                   </div>
+                    
+                </div>
+            </div>
+            <div class = "buttonArea">
+                <button class = "powerButton" type = "button"></button>
+                <button class = "redSelectButton styleButton" type = "button"></button>
+                <button class = "greenSelectButton styleButton" type = "button"></button>
+                <button class = "selectButton"></button>
+                <div class = "directionalPad">
+                    <button class = "upDirection directionButton" type = "button"> | </button>
+                    <button class = "leftDirection directionButton" type = "button">-</button>
+                    <button class = "rightDirection directionButton" type = "button"> -</button>
+                    <button class = "downDirection directionButton" type = "button"> |</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class = "rightSidePokedexLayout">
+            <div class = "numberSearchBar"></div>
+            <div class = "keyPad">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>0</button>
+            </div>
+            <div class = "bottomButtonLayout">
+            <button class = "minusButton">-</button>
+            <button class = "plusButton">+</button>
+                
+            </div>
+            <div class = "lastRowOfButtons">
+                <button class = "clear" type=button>CLEAR</button>
+                <button class = "enter" type=button>ENTER</button>
+        </div>
+
+
+
+    </div> 
+</body>
+</html>
