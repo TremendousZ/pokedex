@@ -32,7 +32,7 @@ body{
     display:inline-block;
     border: 1px solid black;
     height: 80%;
-    background-color: blue;
+    background: linear-gradient( lightblue, blue);
     width: 20%;
     border-radius: 50%;
 }
@@ -46,15 +46,16 @@ body{
     border-radius: 50%;
 }
 .redBatteryLight{
-    background-color: brown;
+    background: linear-gradient( pink, red);
+
 }
 
 .yellowBatteryLight{
-    background-color: yellow;
+    background: linear-gradient( whitesmoke, yellow);
 }
 
 .greenBatteryLight{
-    background-color: green;
+    background: linear-gradient( whitesmoke, lawngreen);
 }
 
 .displayScreenBorder {
@@ -111,13 +112,17 @@ body{
     position: relative;
     font-size: 1vmin;
     padding:0;
+    bottom: 6%;
     background: linear-gradient(white, grey);
-    border-radius: 5%;
+    border-radius: 4%;
     
 }   
 
 .stats > li {
-
+    font-size: 1.5vmin;
+    margin: 8% ;
+    position: relative;
+    top:5%;
 }
 
 
@@ -125,10 +130,21 @@ body{
     text-transform: uppercase
 }
 
+#pokemonName{
+    font-size:1rem;
+    border: 1px yellow dashed;
+    height: 20%;
+    position: relative;
+    top:5%;
+}
 .description{
-    width: 100%;
+    width: 90%;
     height:49%;
-    border: 1px solid blue;
+    border: 4px solid blue;
+    background: linear-gradient(white, yellow);
+    position: relative;
+    left: 5%;
+    border-radius: 5%;
 
 }
 

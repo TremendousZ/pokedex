@@ -5,6 +5,9 @@ $(document).ready(startUp);
 function startUp() {
     $('.enter').on('click' , submitPokeNumber);
     $(".keyPad > *").on('click', enterNumber);
+    $(".clear").on("click", clearNumberSearchBar);
+    $('side').on('click',selectImmediatePokemon);
+
     
 }
 var pokeNumber = null;
@@ -98,4 +101,13 @@ function submitPokeNumber(  ) {
     // getPokemon( pokeNumber );
     getPokemonDummyData( pokeDummyData );
 
+}
+
+function clearNumberSearchBar() {
+    $(".numberSearchBar").text(`SEARCH: `);
+    pokemonSearchIndex = [];
+}
+
+function selectImmediatePokemon(){
+    if()
 }

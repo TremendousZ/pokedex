@@ -1,4 +1,4 @@
-var pokeDummyData = {
+pokvar pokeDummyData = {
     "forms": [
         {
             "url": "https://pokeapi.co/api/v2/pokemon-form/56/",
