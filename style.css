@@ -99,7 +99,7 @@ body{
 #pokeNumber{
     display: inline-block;
     width: 100%;
-    height:30%;
+    height:15%;
     font-size: 3vmin;
     border: 3px pink dotted;
     text-align: center;
@@ -107,7 +107,7 @@ body{
 .stats{
     width:100%;
     margin: 0;
-    height: 70%;
+    height: 85%;
     list-style: none;
     position: relative;
     font-size: 1vmin;
@@ -131,11 +131,12 @@ body{
 }
 
 #pokemonName{
-    font-size:1rem;
+    font-size:1.5rem;
     border: 1px yellow dashed;
     height: 20%;
     position: relative;
     top:5%;
+    left: 5%;
 }
 .description{
     width: 90%;

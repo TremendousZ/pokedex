@@ -6,7 +6,7 @@ function startUp() {
     $('.enter').on('click' , submitPokeNumber);
     $(".keyPad > *").on('click', enterNumber);
     $(".clear").on("click", clearNumberSearchBar);
-    $('side').on('click',selectImmediatePokemon);
+    $('.side').on('click',selectImmediatePokemon);
 
     
 }
@@ -56,6 +56,7 @@ function getPokemonDummyData( response ) {
 function loadPokemonData( response ) {
     var nameOfPokemon = response.name;
     $("#pokemonName").text(nameOfPokemon);
+    readPokeName( nameOfPokemon);
     var pokemonWeight = response.weight;
     $('#weight').text(` WEIGHT: ${pokemonWeight} kg`);
     var pokemonImage = response.sprites.front_default; 
@@ -98,8 +99,8 @@ function pokeNumberSearchDisplay( number ){
 }
 
 function submitPokeNumber(  ) {
-    // getPokemon( pokeNumber );
-    getPokemonDummyData( pokeDummyData );
+    getPokemon( pokeNumber );
+    // getPokemonDummyData( pokeDummyData );
 
 }
 
@@ -109,5 +110,55 @@ function clearNumberSearchBar() {
 }
 
 function selectImmediatePokemon(){
-    if()
+    debugger;
+    if($(this).hasClass("leftDirection")) {
+        --pokeNumber;
+        getPokemon(pokeNumber);
+    } else {
+        ++pokeNumber;
+        getPokemon(pokeNumber);
+    }
 }
+
+
+
+function readPokeName (pokemonName) {
+    responsiveVoice.speak( pokemonName, "UK English Female");
+
+}
+
+
+
+// {
+//     "audioConfig": {
+//       "audioEncoding": "LINEAR16",
+//       "pitch": "0.00",
+//       "speakingRate": "1.00"
+//     },
+//     "input": {
+//       "text": "Google Cloud Text-to-Speech enables developers to synthesize natural-sounding speech with 32 voices, available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, you can create lifelike interactions with your users, across many applications and devices."
+//     },
+//     "voice": {
+//         'languageCode':'en-gb',
+//         'name':'en-GB-Standard-A',
+//         'ssmlGender':'FEMALE'
+//     }
+//   }
+
+//   https://texttospeech.googleapis.com/v1beta1/text:synthesize
+
+//   function readPokemonName( string ){
+//     console.log("AJAX initiated");
+
+//     var ajaxCall = {
+//         dataType: "json",
+//         url: "https://texttospeech.googleapis.com/v1beta1/text:synthesize",
+//         method: 'POST',
+//         success: loadPokemonData,
+//         // error: console.log
+
+//     }
+//     $.ajax(ajaxCall);
+// }
+
+  
