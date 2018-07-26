@@ -15,11 +15,24 @@ body{
     vertical-align: top;
     width: 30%;
     height: 80%;
+    left:16%;
+    top:10%;
     background-color: red;
     position: relative;
     display: inline-block;
     border: 3px black solid;
 }
+.rightSidePokedexLayout {
+    width: 30%;
+    height: 80%;
+    left:16%;
+    top:10%;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    border: 3px black solid;
+}
+
 
 .topLights {
     border: 1px black solid;
@@ -227,15 +240,6 @@ body{
     position: relative;
     left:50%;
     transform:translate(-50%);
-}
-
-.rightSidePokedexLayout {
-    width: 30%;
-    height: 80%;
-    background-color: red;
-    position: relative;
-    display: inline-block;
-    border: 3px black solid;
 }
 
 .numberSearchBar{

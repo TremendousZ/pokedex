@@ -10,13 +10,13 @@ function startUp() {
 
     
 }
-var pokeNumber = null;
-var pokemonSearchIndex = [];
+let pokeNumber = null;
+let pokemonSearchIndex = [];
 
 function getPokemon( number ){
     console.log("AJAX initiated");
 
-    var ajaxCall = {
+    let ajaxCall = {
         dataType: "json",
         url: `https://pokeapi.co/api/v2/pokemon/${number}`,
         // method: 'get',
@@ -29,15 +29,15 @@ function getPokemon( number ){
 
 
 function getPokemonDummyData( response ) {
-    var nameOfPokemon = response.name;
+    const nameOfPokemon = response.name;
     $("#pokemonName").text(nameOfPokemon);
-    var pokemonWeight = response.weight;
+    const pokemonWeight = response.weight;
     $('#weight').text(` WEIGHT: ${pokemonWeight} kg`);
-    var pokemonImage = response.sprites.front_default; 
+    const pokemonImage = response.sprites.front_default; 
     $('#pokemonImage').attr("src", pokemonImage);
-    var pokemonHeight = response.height;
+    const pokemonHeight = response.height;
     $('#height').text(`HEIGHT: ${pokemonHeight} m`);
-    var pokeNumber = response.id;
+    const pokeNumber = response.id;
     if(pokeNumber < 10) {
         $('#pokeNumber').text(`#00${pokeNumber}`);  
     } else if (pokeNumber < 100) {
@@ -45,25 +45,32 @@ function getPokemonDummyData( response ) {
     } else {
         $('#pokeNumber').text(`#${pokeNumber}`);  
     }
-    var pokeType = response.types[0].type.name;
+    const pokeType = response.types[0].type.name;
     $('#type').text( `TYPE: ${pokeType}`); 
-    var pokeAbility = response.abilities[1].ability.name;
+    const pokeAbility = response.abilities[1].ability.name;
     $("#ability").text(`ABILITY: ${pokeAbility}`);
 
 }
 
 
 function loadPokemonData( response ) {
-    var nameOfPokemon = response.name;
+    debugger;
+    const nameOfPokemon = response.name;
     $("#pokemonName").text(nameOfPokemon);
-    readPokeName( nameOfPokemon);
-    var pokemonWeight = response.weight;
+
+    const pokemonWeight = response.weight;
     $('#weight').text(` WEIGHT: ${pokemonWeight} kg`);
-    var pokemonImage = response.sprites.front_default; 
+
+    const pokemonImage = response.sprites.front_default; 
     $('#pokemonImage').attr("src", pokemonImage);
-    var pokemonHeight = response.height;
+
+    const pokemonHeight = response.height;
     $('#height').text(`HEIGHT: ${pokemonHeight} m`);
-    var pokeNumber = response.id;
+
+    const pokeNumber = response.id;
+    const pokeAbility = response.abilities[1].ability.name;
+    $("#ability").text(`ABILITY: ${pokeAbility}`);
+
     if(pokeNumber < 10) {
         $('#pokeNumber').text(`#00${pokeNumber}`);  
     } else if (pokeNumber < 100) {
@@ -71,10 +78,20 @@ function loadPokemonData( response ) {
     } else {
         $('#pokeNumber').text(`#${pokeNumber}`);  
     }
-    var pokeType = response.types[0].type.name;
-    $('#type').text( `TYPE: ${pokeType}`); 
-    var pokeAbility = response.abilities[1].ability.name;
-    $("#ability").text(`ABILITY: ${pokeAbility}`);
+
+    if( response.types.length === 2){
+        let pokeType1 = response.types[0].type.name;
+        let pokeType2 = response.types[1].type.name;
+        $('#type').text( `TYPE: ${pokeType1} , ${pokeType2}`); 
+        let pokemonReadString = `Pokemon Name ${nameOfPokemon} Pokemon Number ${pokeNumber} type ${pokeType1} ${pokeType2} ability ${pokeAbility}`;
+        readPokeName( pokemonReadString);
+
+    } else {
+        let pokeType = response.types[0].type.name;
+        $('#type').text( `TYPE: ${pokeType}`); 
+        let pokemonReadString = `Pokemon Name ${nameOfPokemon} Pokemon Number ${pokeNumber} type ${pokeType} ability ${pokeAbility}`;
+        readPokeName( pokemonReadString);
+    }
 }
 
 // http://pokeapi.co/api/v2/pokemon/ <------number
@@ -120,45 +137,7 @@ function selectImmediatePokemon(){
     }
 }
 
-
-
-function readPokeName (pokemonName) {
-    responsiveVoice.speak( pokemonName, "UK English Female");
+function readPokeName ( string ) {
+    responsiveVoice.speak( string , "UK English Female", {rate: 1});
 
 }
-
-
-
-// {
-//     "audioConfig": {
-//       "audioEncoding": "LINEAR16",
-//       "pitch": "0.00",
-//       "speakingRate": "1.00"
-//     },
-//     "input": {
-//       "text": "Google Cloud Text-to-Speech enables developers to synthesize natural-sounding speech with 32 voices, available in multiple languages and variants. It applies DeepMind’s groundbreaking research in WaveNet and Google’s powerful neural networks to deliver the highest fidelity possible. As an easy-to-use API, you can create lifelike interactions with your users, across many applications and devices."
-//     },
-//     "voice": {
-//         'languageCode':'en-gb',
-//         'name':'en-GB-Standard-A',
-//         'ssmlGender':'FEMALE'
-//     }
-//   }
-
-//   https://texttospeech.googleapis.com/v1beta1/text:synthesize
-
-//   function readPokemonName( string ){
-//     console.log("AJAX initiated");
-
-//     var ajaxCall = {
-//         dataType: "json",
-//         url: "https://texttospeech.googleapis.com/v1beta1/text:synthesize",
-//         method: 'POST',
-//         success: loadPokemonData,
-//         // error: console.log
-
-//     }
-//     $.ajax(ajaxCall);
-// }
-
-  
